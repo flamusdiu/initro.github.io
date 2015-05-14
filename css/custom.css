@@ -21,6 +21,20 @@ footer {
 	background-color: #f5f5f5;
 }
 
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;	
+}
+
+#back-to-top a {
+	color: #333;
+}
+
+#back-to-top a:hover {
+	text-decoration: none;
+}
+
 .jumbotron {
 	text-align: center;	
 	background-image: url('../images/hero-image.jpg');
