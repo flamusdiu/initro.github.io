@@ -44,6 +44,29 @@ body {
   margin-left: auto;
 }
 
+ul.title-code {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  font-family: 'Inconsolata';
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+ul.title-code li{
+  margin: 0px 5px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+ul.title-code li:nth-child(2), ul.title-code li:nth-child(3), ul.title-code li:nth-child(4) {
+  padding-left: 25px;
+}
+
+ul.title-code a{
+  color: #f39c12;
+}
+
 /* Padding for spacing */
 .inner {
   padding: 30px;
@@ -57,6 +80,13 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Inconsolata';
+  text-align: left;
+  font-weight: 100;
+  font-size: 26px;
+}
+
+.masthead.clearfix h3 {
+  text-align: left;
 }
 
 /*
@@ -65,6 +95,7 @@ body {
 
 .cover {
   padding: 0 20px;
+  padding-top: 100px;
 }
 
 .inner.cover > p > img {
