@@ -11,18 +11,6 @@ a:focus, a:hover {
   color: #f5f5f5;;
 }
 
-
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
-
 /*
  * Base structure
  */
@@ -61,26 +49,15 @@ body {
   padding: 30px;
 }
 
-
 /*
  * Header
  */
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Inconsolata';
 }
-
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: center;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
 
 /*
  * Cover
@@ -96,14 +73,11 @@ body {
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-.inner.cover > p > img:hover {
-  opacity: .5;
-  filter: alpha(opacity=50);
-}
 .cover h3 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.7em;
@@ -132,22 +106,28 @@ ul.buttons li{
   margin: 0px 5px;
 }
 
-
-
-
 /*
  * Footer
  */
 
-.mastfoot {
+.footer {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
 }
 
-
 /*
  * Affix and center
  */
+
+
+@media (min-width: 768px) {
+   .masthead-brand {
+     float: center;
+   }
+   .masthead-nav {
+     float: right;
+   }
+ }
 
 @media (min-width: 768px) {
   /* Pull out the header and footer */
@@ -164,9 +144,7 @@ ul.buttons li{
     vertical-align: middle;
   }
   /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
+  .masthead, .mastfoot, .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
@@ -177,7 +155,6 @@ ul.buttons li{
     height: 100px;
     -webkit-border-radius: 100px;
   }
-
   .cover h3 {
     font-size: 1.4em;
   }
@@ -185,11 +162,8 @@ ul.buttons li{
 }
 
 
-
 @media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
+  .masthead, .mastfoot, .cover-container {
     width: 700px;
   }
 }
