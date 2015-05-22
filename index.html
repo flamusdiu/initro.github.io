@@ -40,6 +40,7 @@
         $('li.function').children().addClass('selectedimage');
         $('li.function').children().hide();
         $('span.brace').show();
+		$('span.function-inner').show();
         $('li.function').each(function(column) {
           $(this).click(function(event) {
             if (this == event.target) {
@@ -47,11 +48,13 @@
                 $(this).children().show();
                 $(this).find('span.brace').hide();
                 $(this).find('.plusimageapply span.brace').show();
+				$(this).find('span.function-inner').show();
                 $(this).removeClass('plusimageapply');
                 $(this).addClass('minusimageapply');
               } else {
                 $(this).children().hide();
                 $(this).find('span.brace').show();
+				$(this).find('span.function-inner').show();
                 $(this).removeClass('minusimageapply');
                 $(this).addClass('plusimageapply');
               };
@@ -72,9 +75,9 @@
             <div class="row">
               <div class="col-md-12">
                 <ul class="sidebar-nav">
-                  <li class="function">public class initializeReadOnly {<span class="brace">++}</span>
+                  <li class="function">public class initializeReadOnly {<span class="brace"><span class="infinite-sign">&#x26AF;</span>}</span>
                     <ul>
-                      <li class="function">public static void main(String [] args) {<span class="brace">++}</span>
+                      <li class="function">public static void main(String [] args) {<span class="brace"><span class="infinite-sign">&#x26AF;</span>}</span>
                         <ul>
                           <li>language('Java');</li>
                           <li>language('HTML5')</li>
@@ -93,7 +96,7 @@
                           <li class="last">} </li>
                         </ul>       
                       </li>
-                      <li class="function">public static void language (char lang) {<span class="brace">++}</span>
+                      <li class="function">public static void language (char lang) {<span class="brace"><span class="infinite-sign">&#x26AF;</span>}</span>
                           <ul>
                             <li>switch (lang) {</li>
                             <div class="indent"><li>case 'Java':</li>

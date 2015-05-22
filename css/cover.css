@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Globals
  */
 
@@ -76,6 +76,11 @@ ul.sidebar-nav a{
 	padding-left: 30px;
 	position: relative;
 }
+
+.infinite-sign {
+	color: #5374C6;
+}
+
 /* Padding for spacing */
 .inner {
   padding: 30px;
@@ -94,10 +99,6 @@ ul.sidebar-nav a{
   font-size: 26px;
 }
 
-.masthead.clearfix h3 {
-  text-align: left;
-  color: #135785;
-}
 
 /*
  * Cover
