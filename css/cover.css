@@ -44,8 +44,11 @@ body {
   margin-left: auto;
 }
 
+ul {
+	padding-left: 30px;
+}
+
 ul.sidebar-nav {
-  list-style: none;
   padding: 0;
   margin-top: 30px;
   font-family: 'Inconsolata';
@@ -59,34 +62,20 @@ ul.sidebar-nav li{
   font-weight: 100;
 }
 
-ul.sidebar-nav li:first-child {
-
-}
-
-ul.sidebar-nav li:nth-child(3), ul.sidebar-nav li:nth-child(16), ul.sidebar-nav li:nth-child(20), ul.sidebar-nav li:nth-child(22), ul.sidebar-nav li:nth-child(29), ul.sidebar-nav li:nth-child(35) {
-  padding-left: 25px;
-}
-
-ul.sidebar-nav li:nth-child(5),ul.sidebar-nav li:nth-child(6),ul.sidebar-nav li:nth-child(7),ul.sidebar-nav li:nth-child(9),ul.sidebar-nav li:nth-child(12),ul.sidebar-nav li:nth-child(14),ul.sidebar-nav li:nth-child(19),ul.sidebar-nav li:nth-child(24){
-  padding-left: 50px;
-}
-
-ul.sidebar-nav li:nth-child(25), ul.sidebar-nav li:nth-child(28), ul.sidebar-nav li:nth-child(31), ul.sidebar-nav li:nth-child(34) {
-  padding-left: 50px;
-}
-
-ul.sidebar-nav li:nth-child(13), ul.sidebar-nav li:nth-child(15), ul.sidebar-nav li:nth-child(16), ul.sidebar-nav li:nth-child(17), ul.sidebar-nav li:nth-child(18),ul.sidebar-nav li:nth-child(26),ul.sidebar-nav li:nth-child(27),ul.sidebar-nav li:nth-child(29) {
-  padding-left: 75px;
-}
-
-ul.sidebar-nav li:nth-child(29), ul.sidebar-nav li:nth-child(30), ul.sidebar-nav li:nth-child(32), ul.sidebar-nav li:nth-child(33) {
-  padding-left: 75px;
-}
-
 ul.sidebar-nav a{
   color: #f39c12;
 }
 
+.last {
+	left: -60px;
+	position: relative;
+	list-style: none;
+}
+
+.indent {
+	padding-left: 30px;
+	position: relative;
+}
 /* Padding for spacing */
 .inner {
   padding: 30px;
@@ -117,9 +106,10 @@ ul.sidebar-nav a{
 .cover {
   padding: 0 20px;
   padding-top: 100px;
+	border: 2;
 }
 
-.inner.cover > p > img {
+.inner.cover img {
   width: 150px;
   height: 150px;
   border-radius: 150px;
@@ -130,10 +120,11 @@ ul.sidebar-nav a{
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-.cover h3 {
+.cover .cover-heading {
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.7em;
   margin-top: 15px;
+  display: block;
 }
 
 .cover .btn-lg {
@@ -141,11 +132,16 @@ ul.sidebar-nav a{
   font-weight: bold;
 }
 
-.cover h4 {
+.cover#name {
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.2em;
   margin-top: 10px;
+  display: block;
 }
+
+.plusimageapply { list-style-image:url(../images/plus.png); cursor:pointer; } 
+.minusimageapply { list-style-image:url(../images/minus.png); cursor:pointer; } 
+.selectedimage{ list-style-image:url(../images/selected.png); cursor:pointer; }
 
 ul.buttons{
   list-style: none;
