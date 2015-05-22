@@ -40,7 +40,6 @@
         $('li.function').children().addClass('selectedimage');
         $('li.function').children().hide();
         $('span.brace').show();
-		$('span.function-inner').show();
         $('li.function').each(function(column) {
           $(this).click(function(event) {
             if (this == event.target) {
@@ -48,7 +47,6 @@
                 $(this).children().show();
                 $(this).find('span.brace').hide();
                 $(this).find('.plusimageapply span.brace').show();
-				$(this).find('span.function-inner').show();
                 $(this).removeClass('plusimageapply');
                 $(this).addClass('minusimageapply');
               } else {
