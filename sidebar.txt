@@ -1,0 +1,38 @@
+
+public class initializeReadOnly {
+
+    public static void main(String [] args) {
+
+        language('Java');
+        language('HTML5');
+        language('CSS3');
+
+
+        String user = "matthew";
+
+
+        if (user == matthew) {
+            System.out.println("GET BACK TO CODING!!!");
+        } else {
+            view = aboutMe;
+            browse = projects;
+            history = gitHubRepositories;
+            email = initroDev@gmail.com
+        }
+    }
+
+    public static void language (char lang) {
+
+        switch (lang) {
+        case 'Java':
+            System.out.println("Click here for Java projects.");
+            break;
+        case 'HTML5':
+            System.out.println("Click here for HTML projects.")
+            break;
+        case 'CSS3':
+            System.out.println("Click here for CSS3 projects.")
+            break;
+        }
+    }
+}
