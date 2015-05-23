@@ -12,11 +12,11 @@
 
     <title>iNitro</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet" type="text/css">
+    <link href="css/cover-new.css" rel="stylesheet" type="text/css">
 
     <!-- Font-Awesome -->
     <link href="fonts/font-awesome/css/font-awesome.min.css"  rel="stylesheet">
@@ -30,49 +30,10 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    <!-- Load JQuery 1.11.3 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    
-    <script>
-      $(document).ready(function() {
-        $('li.function').addClass('plusimageapply');
-        $('li.function').children().addClass('selectedimage');
-        $('li.function').children().hide();
-        $('span.brace').show();
-        $('li.function').each(function(column) {
-          $(this).click(function(event) {
-            if (this == event.target) {
-              if($(this).is('.plusimageapply')) {
-                $(this).children().show();
-                $(this).find('span.brace').hide();
-                $(this).find('.plusimageapply span.brace').show();
-                $(this).removeClass('plusimageapply');
-                $(this).addClass('minusimageapply');
-              } else {
-                $(this).children().hide();
-                $(this).find('span.brace').show();
-				$(this).find('span.function-inner').show();
-                $(this).removeClass('minusimageapply');
-                $(this).addClass('plusimageapply');
-              };
-            };
-          });
-         });
-        });
-    </script>
   </head>
 
   <body>
-
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-        <div class="masthead clearfix">
-          <div class="inner">
-            <div class="row">
-              <div class="col-md-12">
-                <ul class="sidebar-nav">
+    <ul role="nav" id="side-nav">
                   <li class="function">public class initializeReadOnly {<span class="brace"><span class="infinite-sign">&#x26AF;</span>}</span>
                     <ul>
                       <li class="function">public static void main(String [] args) {<span class="brace"><span class="infinite-sign">&#x26AF;</span>}</span>
@@ -121,44 +82,31 @@
                    </ul>
                  </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cover-container">
-          <div class="inner cover">
-              <img src="images/avatar.png" alt="iNitro" target="avatar.png">
-              <span class="cover-heading">iNitro</span>
-              <span id="name">Matthew Willis</span>
-          </div>
-          <ul class="buttons">
-            <li><a href="https://www.facebook.com/matthew.willis.9026" target="_blank" title="Facebook"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-            <li><a href="https://www.linkedin.com/profile/view?id=298264876" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
-            <li><a href="https://github.com/initro" target="_blank" title="GitHub"><i class="fa fa-github-square fa-3x"></i></a></li>
-            <li><a href="https://plus.google.com/+MatthewWillis/" target="_blank" title="Google+"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
-            <li><a href="http://stackoverflow.com/users/4186214/matthew-willis" target="_blank" title="Stack Overflow"><i class="fa fa-stack-overflow fa-3x"></i></a></li>
-
-          </ul>
-
-          <div class="footer">
-            <div class="inner">
-              For more information, contact me via email: <a href='mailto:initrodev@gmail.com' target="_top">initrodev@gmail.com</a>
-            </div>
-          </div>
-
-        </div>
-
+    <div class="container">
+	  <div id="contact">
+      <div id="cover">
+        <img id="cover-img" src="images/avatar.png" alt="iNitro" target="avatar.png">
+        <span id="cover-name">iNitro</span>
+        <span id="cover-real-name">Matthew Willis</span>
       </div>
+      <ul id="contact-buttons">
+              <li><a href="https://www.facebook.com/matthew.willis.9026" target="_blank" title="Facebook"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+              <li><a href="https://www.linkedin.com/profile/view?id=298264876" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+              <li><a href="https://github.com/initro" target="_blank" title="GitHub"><i class="fa fa-github-square fa-3x"></i></a></li>
+              <li><a href="https://plus.google.com/+MatthewWillis/" target="_blank" title="Google+"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
+              <li><a href="http://stackoverflow.com/users/4186214/matthew-willis" target="_blank" title="Stack Overflow"><i class="fa fa-stack-overflow fa-3x"></i></a></li>
 
+        </ul>
+        <div id="footer">
+          For more information, contact me via email: <a href='mailto:initrodev@gmail.com' target="_top">initrodev@gmail.com</a>
+        </div>
     </div>
-
+	  </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 </html>
