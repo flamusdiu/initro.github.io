@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$('li.function').addClass('plusimageapply');
-	$('li.function').children().addClass('selectedimage');
 	$('li.function').children().hide();
 	$('span.brace').show();
 	$('li.function').each(function(column) {

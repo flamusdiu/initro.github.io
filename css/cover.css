@@ -26,39 +26,34 @@ body {
 	text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
+.vertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;     /* Align the flex-items vertically */
+  justify-content: center; /* Optional, to align inner flex-items 
+                              horizontally within the column  */
+}
 
 /*
  * Cover
  */
 
-.container {
-  text-align: center;
-  height: 100%;
-  z-index: -1;
-}
- 
-.container:before {
-  content: '';
-  display: inline-block;
-  height: 100%; 
-  vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
- 
- }
-
 #contact {
-  display: inline-block;
-  vertical-align: middle;
   width: 400px;
   padding: 10px 15px;
+  text-align: center;
 }
 
 #cover-img {
   width: 150px;
   height: 150px;
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
   box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
@@ -99,13 +94,10 @@ body {
  */
 #side-nav {
 	padding-left: 30px;
-	margin-top: 30px;
+	margin-top: 15px;
   	font-family: 'Inconsolata';
   	text-align: left;
   	letter-spacing: 1px;
-	z-index: 3;
-	position: absolute;
-	float: left;
 }
 
 #side-nav ul {
@@ -116,6 +108,7 @@ body {
   margin: 0px 5px;
   font-size: 17px;
   font-weight: 100;
+  list-style: none;
 }
 
 #side-nav a{
@@ -137,5 +130,65 @@ body {
 }
 
 #side-nav .plusimageapply { list-style-image:url(../images/plus.png); cursor:pointer; } 
-#side-nav .minusimageapply { list-style-image:url(../images/minus.png); cursor:pointer; } 
-#side-nav .selectedimage{ list-style-image:url(../images/selected.png); cursor:pointer; }
+#side-nav .minusimageapply { list-style-image:url(../images/minus.png); cursor:pointer; }
+
+/*
+ * Coded editor UI
+ */
+#code-editor-ui {
+	background: rgba(0,0,0,0.3);
+	margin: 10px;
+	padding: 3px;
+	z-index: 3;
+	/*height: 750px;
+	width: 694px;*/
+}
+
+#code-editor-ui #title-bar {
+	width: 100%;
+	height: 30px;
+
+	/* http://www.colorzilla.com/gradient-editor/ */
+	background: #4c4c4c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+	
+	-webkit-box-shadow: 0px 2px 2px -1px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 2px 2px -1px rgba(255,255,255,1);
+	box-shadow: 0px 2px 2px -1px rgba(255,255,255,1);
+}
+
+#code-editor-ui #title-bar #controls {
+	display: inline-block;
+	padding-left: 5px;
+	padding-top: 5px;
+	position: absolute;
+}
+
+#code-editor-ui #title-bar #code-editor-title {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow:hidden;
+  	padding-right: 5px;
+}
+
+@media (max-width: 990px) {
+	#code-editor-ui #title-bar #code-editor-title {
+		text-align: center;
+	}
+}
+
+@media (max-width: 668px) {
+	#code-editor-ui #title-bar #code-editor-title {
+		padding-left: 85px;
+	}
+}
